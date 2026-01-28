@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Grid Gallery</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html" class="active">Gallery</a>
+        </nav>
+    </header>
+
+    <div class="gallery-container">
+        <section class="gallery-header">
+            <h2>Image Gallery Example</h2>
+            <p>This gallery uses <strong>grid-column</strong> and <strong>span</strong> to create items of different sizes.</p>
+        </section>
+
+        <main class="grid-gallery">
+            <div class="gallery-item span-2-col">
+                <img src="https://picsum.photos/id/1015/800/400" alt="River Landscape">
+                <div class="label">Spans 2 columns</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/1016/400/400" alt="Mountain Canyon">
+                <div class="label">Regular</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/16/400/400" alt="Coastal Path">
+                <div class="label">Regular</div>
+            </div>
+
+            <div class="gallery-item
+span-2-row">
+                <img src="https://picsum.photos/id/1019/400/800" alt="Ocean Waves">
+                <div class="label">Spans 2 rows</div>
+            </div>
+
+            <div class="gallery-item span-2-col span-2-row">
+                <img src="https://picsum.photos/id/1025/800/800" alt="Sleeping Dog in Forest">
+                <div class="label">Spans 2 cols & 2 rows</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/1035/400/400" alt="Waterfall">
+                <div class="label">Regular</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://picsum.photos/id/1040/400/400" alt="Winter Castle">
+                <div class="label">Regular</div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CSS Grid Exercise | Learning Resource for Students</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* 1. General Reset */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 2. Header - Title Left, Nav Top-Right */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between; /* Pushes H1 left and NAV right */
+    align-items: center;           
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+/* 3. Main Container Layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile default: Stacks Menu on top of Form */
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+/* 4. Desktop Adjustments (Gap and Side-by-Side) */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 250px 1fr; /* Desktop: Menu left, Form right */
+        gap: 20px; /* This creates the gap between sidebar and content */
+        margin-top: 20px; /* This creates the gap between Header and the Menu/Content */
+    }
+}
+
+/* 5. Sidebar (Menu) */
+.sidebar {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    height: fit-content; /* Prevents sidebar from stretching unnecessarily */
+}
+
+.sidebar h3 {
+    border-bottom: 1px solid #455a64;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #2c3e50;
+}
+
+.sidebar ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+}
+/* 6. Main Content Area */
+.main-content {
+    background: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* 7. Form Rows - 100% Width Fix */
+.form-group {
+    padding: 20px;
+    width: 100%; 
+}
+
+.form-group:nth-child(odd) { background-color: #ebf5fb; }
+.form-group:nth-child(even) { background-color: #fef9e7; }
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* The fields occupy 100% of the colored row */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block; 
+}
+
+/* 8. Buttons */
+.button-group {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="reset"] { background-color: #95a5a6; color: white; }
+button:disabled { background-color: #d5dbdb; color: #7f8c8d; cursor: not-allowed; }
+
+/* 9. Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
